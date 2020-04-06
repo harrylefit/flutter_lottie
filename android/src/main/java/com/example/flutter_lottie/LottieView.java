@@ -92,7 +92,12 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
             }
         }
 
-        animationView.setScaleType(ImageView.ScaleType.FIT_XY);
+        if (args.get("autoFillSize") != null) {
+            boolean autoFillSize = Boolean.parseBoolean(args.get("autoFillSize").toString());
+            if (autoFillSize) {
+                animationView.setScaleType(ImageView.ScaleType.FIT_XY);
+            }
+        }
 
         boolean loop, reverse, autoPlay;
 

@@ -14,6 +14,7 @@ class LottieView extends StatefulWidget {
       this.loop = false,
       this.autoPlay,
       this.reverse,
+      this.autoFillSize,
       this.hardwareAcceleratedMode})
       : super(key: key);
 
@@ -25,16 +26,18 @@ class LottieView extends StatefulWidget {
       this.autoPlay,
       this.reverse,
       this.imagesRes,
+      this.autoFillSize,
       this.hardwareAcceleratedMode})
       : super(key: key);
 
   final bool loop;
   final bool autoPlay;
   final bool reverse;
+  final bool hardwareAcceleratedMode;
+  final bool autoFillSize;
   String url;
   String filePath;
   String imagesRes;
-  final bool hardwareAcceleratedMode;
 
   @override
   _LottieViewState createState() => _LottieViewState();
@@ -55,7 +58,8 @@ class _LottieViewState extends State<LottieView> {
           "reverse": widget.reverse,
           "autoPlay": widget.autoPlay,
           "imagesRes": widget.imagesRes,
-          "hardwareAcceleratedMode": widget.hardwareAcceleratedMode
+          "hardwareAcceleratedMode": widget.hardwareAcceleratedMode,
+          "autoFillSize": widget.autoFillSize
         },
         creationParamsCodec: StandardMessageCodec(),
         onPlatformViewCreated: onPlatformCreated,
@@ -69,7 +73,8 @@ class _LottieViewState extends State<LottieView> {
           "loop": widget.loop,
           "reverse": widget.reverse,
           "autoPlay": widget.autoPlay,
-          "hardwareAcceleratedMode": widget.hardwareAcceleratedMode
+          "hardwareAcceleratedMode": widget.hardwareAcceleratedMode,
+          "autoFillSize": widget.autoFillSize
         },
         creationParamsCodec: StandardMessageCodec(),
         onPlatformViewCreated: onPlatformCreated,

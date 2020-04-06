@@ -25,9 +25,6 @@ class _MyAppState extends State<MyApp> {
       home: PageDragger(
         stream: this.newProgressStream,
         child: Scaffold(
-          appBar: AppBar(
-            title: const Text('Lottie'),
-          ),
           body: Center(
             child: Container(
               child: SizedBox(
@@ -40,6 +37,7 @@ class _MyAppState extends State<MyApp> {
                   loop: true,
                   reverse: true,
                   hardwareAcceleratedMode: true,
+                  autoFillSize: true,
                   onViewCreated: onViewCreatedFile,
                 ),
               ),

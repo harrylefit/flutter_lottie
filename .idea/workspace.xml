@@ -3,9 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="9a3a13f9-0720-4c19-9d7c-de5e4c9bf000" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/com/example/flutter_lottie/LottieView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/example/flutter_lottie/LottieView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Podfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/LottieView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/LottieView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/flutter_lottie.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/flutter_lottie.podspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/lottie_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/lottie_view.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +71,7 @@
       <updated>1586153991123</updated>
       <workItem from="1586153993157" duration="77000" />
       <workItem from="1586154102640" duration="6434000" />
-      <workItem from="1586161178126" duration="803000" />
+      <workItem from="1586161178126" duration="2767000" />
     </task>
     <servers />
   </component>
@@ -74,31 +83,35 @@
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state x="689" y="420" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586155648255" />
-    <state width="1638" height="264" key="GridCell.Tab.0.bottom" timestamp="1586161780077">
+    <state width="1638" height="264" key="GridCell.Tab.0.bottom" timestamp="1586163967989">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state width="1638" height="264" key="GridCell.Tab.0.bottom/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586158017584" />
-    <state width="1638" height="264" key="GridCell.Tab.0.bottom/0.23.1680.980@0.23.1680.980" timestamp="1586161780077" />
-    <state width="1638" height="264" key="GridCell.Tab.0.center" timestamp="1586161780076">
+    <state width="1638" height="264" key="GridCell.Tab.0.bottom/0.23.1680.980@0.23.1680.980" timestamp="1586163967989" />
+    <state width="1638" height="264" key="GridCell.Tab.0.center" timestamp="1586163967989">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state width="1638" height="264" key="GridCell.Tab.0.center/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586158017583" />
-    <state width="1638" height="264" key="GridCell.Tab.0.center/0.23.1680.980@0.23.1680.980" timestamp="1586161780076" />
-    <state width="1638" height="264" key="GridCell.Tab.0.left" timestamp="1586161780076">
+    <state width="1638" height="264" key="GridCell.Tab.0.center/0.23.1680.980@0.23.1680.980" timestamp="1586163967989" />
+    <state width="1638" height="264" key="GridCell.Tab.0.left" timestamp="1586163967988">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state width="1638" height="264" key="GridCell.Tab.0.left/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586158017582" />
-    <state width="1638" height="264" key="GridCell.Tab.0.left/0.23.1680.980@0.23.1680.980" timestamp="1586161780076" />
-    <state width="1638" height="264" key="GridCell.Tab.0.right" timestamp="1586161780077">
+    <state width="1638" height="264" key="GridCell.Tab.0.left/0.23.1680.980@0.23.1680.980" timestamp="1586163967988" />
+    <state width="1638" height="264" key="GridCell.Tab.0.right" timestamp="1586163967989">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state width="1638" height="264" key="GridCell.Tab.0.right/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586158017584" />
-    <state width="1638" height="264" key="GridCell.Tab.0.right/0.23.1680.980@0.23.1680.980" timestamp="1586161780077" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1586158710513">
+    <state width="1638" height="264" key="GridCell.Tab.0.right/0.23.1680.980@0.23.1680.980" timestamp="1586163967989" />
+    <state x="608" y="231" key="RollbackChangesDialog" timestamp="1586163311319">
+      <screen x="0" y="23" width="1680" height="980" />
+    </state>
+    <state x="608" y="231" key="RollbackChangesDialog/0.23.1680.980@0.23.1680.980" timestamp="1586163311319" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1586163219773">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586158005296" />
-    <state width="500" height="445" key="SwitcherDM/0.23.1680.980@0.23.1680.980" timestamp="1586158710513" />
+    <state width="500" height="445" key="SwitcherDM/0.23.1680.980@0.23.1680.980" timestamp="1586163219773" />
     <state x="100" y="123" width="1480" height="780" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1586159515639">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
@@ -112,10 +125,10 @@
     </state>
     <state x="498" y="270" width="683" height="486" key="find.popup/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586155856579" />
     <state x="498" y="270" width="683" height="486" key="find.popup/0.23.1680.980@0.23.1680.980" timestamp="1586159349200" />
-    <state x="505" y="239" width="670" height="676" key="search.everywhere.popup" timestamp="1586159740004">
+    <state x="505" y="239" width="670" height="676" key="search.everywhere.popup" timestamp="1586163916612">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state x="505" y="239" width="670" height="676" key="search.everywhere.popup/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586156425728" />
-    <state x="505" y="239" width="670" height="676" key="search.everywhere.popup/0.23.1680.980@0.23.1680.980" timestamp="1586159740004" />
+    <state x="505" y="239" width="670" height="676" key="search.everywhere.popup/0.23.1680.980@0.23.1680.980" timestamp="1586163916612" />
   </component>
 </project>

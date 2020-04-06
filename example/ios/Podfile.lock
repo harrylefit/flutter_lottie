@@ -3,27 +3,27 @@ PODS:
   - flutter_lottie (0.0.1):
     - Flutter
     - lottie-ios
-  - lottie-ios (2.5.0)
+  - lottie-ios (2.5.3)
 
 DEPENDENCIES:
-  - Flutter (from `.symlinks/flutter/ios`)
+  - Flutter (from `Flutter`)
   - flutter_lottie (from `.symlinks/plugins/flutter_lottie/ios`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - lottie-ios
 
 EXTERNAL SOURCES:
   Flutter:
-    :path: ".symlinks/flutter/ios"
+    :path: Flutter
   flutter_lottie:
     :path: ".symlinks/plugins/flutter_lottie/ios"
 
 SPEC CHECKSUMS:
-  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
-  flutter_lottie: b8300e2b6ca2e420508be3a7449e722a8a095d9a
-  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_lottie: c1fd7e92e771209f8b623119646c15201c5e8c87
+  lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
 
-PODFILE CHECKSUM: ebd43b443038e611b86ede96e613bd6033c49497
+PODFILE CHECKSUM: c34e2287a9ccaa606aeceab922830efb9a6ff69a
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.1
