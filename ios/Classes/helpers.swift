@@ -14,19 +14,19 @@ public class TestStreamHandler : FlutterStreamHandler {
    }
 }
 
-class ColorDelegate : NSObject, LOTColorValueDelegate {
+class ColorDelegate : NSObject { //, LOTColorValueDelegate
    var color : CGColor
-   
+
    init(color : CGColor) {
       self.color = color
    }
-   
+
    func color(forFrame currentFrame: CGFloat, startKeyframe: CGFloat, endKeyframe: CGFloat, interpolatedProgress: CGFloat, start startColor: CGColor!, end endColor: CGColor!, currentColor interpolatedColor: CGColor!) -> Unmanaged<CGColor>! {
       return  Unmanaged.passRetained(self.color)
    }
 }
 
-class NumberDelegate : NSObject, LOTNumberValueDelegate {
+class NumberDelegate : NSObject { //, LOTNumberValueDelegate
    var n : CGFloat
    
    init(number : CGFloat) {
