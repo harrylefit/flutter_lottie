@@ -7,30 +7,34 @@ import 'package:flutter/foundation.dart';
 typedef void LottieViewCreatedCallback(LottieController controller);
 
 class LottieView extends StatefulWidget {
-
-  LottieView.fromURL({
-      @required this.onViewCreated,
+  LottieView.fromURL(
+      {@required this.onViewCreated,
       @required this.url,
       Key key,
       this.loop = false,
       this.autoPlay,
       this.reverse,
-  }) : super(key: key);
+      this.hardwareAcceleratedMode})
+      : super(key: key);
 
-  LottieView.fromFile({
-      Key key,
+  LottieView.fromFile(
+      {Key key,
       @required this.onViewCreated,
       @required this.filePath,
       this.loop = false,
       this.autoPlay,
       this.reverse,
-  }) : super(key: key);
+      this.imagesRes,
+      this.hardwareAcceleratedMode})
+      : super(key: key);
 
   final bool loop;
   final bool autoPlay;
   final bool reverse;
   String url;
   String filePath;
+  String imagesRes;
+  final bool hardwareAcceleratedMode;
 
   @override
   _LottieViewState createState() => _LottieViewState();
@@ -41,47 +45,45 @@ class LottieView extends StatefulWidget {
 class _LottieViewState extends State<LottieView> {
   @override
   Widget build(BuildContext context) {
-
-    if (defaultTargetPlatform ==  TargetPlatform.android) {
-
+    if (defaultTargetPlatform == TargetPlatform.android) {
       return AndroidView(
         viewType: 'convictiontech/flutter_lottie',
-        creationParams: <String,dynamic> {
+        creationParams: <String, dynamic>{
           "url": widget.url,
-          "filePath" : widget.filePath,
+          "filePath": widget.filePath,
           "loop": widget.loop,
           "reverse": widget.reverse,
           "autoPlay": widget.autoPlay,
+          "imagesRes": widget.imagesRes,
+          "hardwareAcceleratedMode": widget.hardwareAcceleratedMode
         },
         creationParamsCodec: StandardMessageCodec(),
         onPlatformViewCreated: onPlatformCreated,
       );
-
     } else if (defaultTargetPlatform == TargetPlatform.iOS) {
-
       return UiKitView(
         viewType: 'convictiontech/flutter_lottie',
-        creationParams: <String,dynamic> {
+        creationParams: <String, dynamic>{
           "url": widget.url,
-          "filePath" : widget.filePath,
+          "filePath": widget.filePath,
           "loop": widget.loop,
           "reverse": widget.reverse,
           "autoPlay": widget.autoPlay,
+          "hardwareAcceleratedMode": widget.hardwareAcceleratedMode
         },
         creationParamsCodec: StandardMessageCodec(),
         onPlatformViewCreated: onPlatformCreated,
       );
-
     }
 
-    return new Text('$defaultTargetPlatform is not yet supported by this plugin');
+    return new Text(
+        '$defaultTargetPlatform is not yet supported by this plugin');
   }
 
-  Future<void> onPlatformCreated(id)  async {
+  Future<void> onPlatformCreated(id) async {
     if (widget.onViewCreated == null) {
       return;
     }
-    widget.onViewCreated( new LottieController(id) );
+    widget.onViewCreated(new LottieController(id));
   }
-
 }

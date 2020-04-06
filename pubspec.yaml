@@ -1,11 +1,15 @@
 name: flutter_lottie
 description: Use lottie in flutter to render animations for iOS and Android
-version: 0.2.0
-author: Cameron Smith <cameronstuartsmith@gmail.com>
-homepage: https://github.com/CameronStuartSmith/flutter_lottie
+version: 0.2.1
+author: Harry Le <harryle.fit@gmail.com>
+homepage: https://github.com/harrylefit/flutter_lottie
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
+  flutter: ">=1.12.0 <2.0.0"
+
+module:
+  androidX: true
 
 dependencies:
   flutter:
@@ -17,5 +21,9 @@ dev_dependencies:
 
 flutter:
   plugin:
-    androidPackage: com.example.flutter_lottie
-    pluginClass: FlutterLottiePlugin
+    platforms:
+      android:
+        package: com.example.flutter_lottie
+        pluginClass: FlutterLottiePlugin
+      ios:
+        pluginClass: FlutterLottiePlugin

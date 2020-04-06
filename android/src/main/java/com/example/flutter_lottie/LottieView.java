@@ -2,17 +2,26 @@ package com.example.flutter_lottie;
 
 import android.animation.Animator;
 import android.content.Context;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.View;
+
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieProperty;
+import com.airbnb.lottie.RenderMode;
 import com.airbnb.lottie.model.KeyPath;
 import com.airbnb.lottie.value.LottieValueCallback;
+
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 import io.flutter.plugin.platform.PlatformView;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Map;
 
 public class LottieView implements PlatformView, MethodChannel.MethodCallHandler {
@@ -59,13 +68,27 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
         });
 
 
-        if(args.get("url") != null) {
+        if (args.get("url") != null) {
             animationView.setAnimationFromUrl(args.get("url").toString());
         }
 
-        if(args.get("filePath") != null) {
+        if (args.get("filePath") != null) {
             String key = mRegistrar.lookupKeyForAsset(args.get("filePath").toString());
+            Log.d("LottieView filePath", key);
             animationView.setAnimation(key);
+        }
+
+        if (args.get("imagesRes") != null) {
+            String key = mRegistrar.lookupKeyForAsset(args.get("imagesRes").toString());
+            Log.d("LottieView", key);
+            animationView.setImageAssetsFolder(key);
+        }
+
+        if (args.get("hardwareAcceleratedMode") != null) {
+            boolean hardwareAcceleratedMode = Boolean.parseBoolean(args.get("hardwareAcceleratedMode").toString());
+            if (hardwareAcceleratedMode) {
+                animationView.setRenderMode(RenderMode.HARDWARE);
+            }
         }
 
         boolean loop, reverse, autoPlay;
@@ -78,13 +101,13 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
 
         maxFrame = animationView.getMaxFrame();
 
-        if(reverse) {
+        if (reverse) {
             animationView.setRepeatMode(2);
         } else {
             animationView.setRepeatMode(1);
         }
 
-        if(autoPlay) {
+        if (autoPlay) {
             animationView.playAnimation();
         }
 
@@ -96,14 +119,14 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                if(onPlaybackFinishEvent != null) {
+                if (onPlaybackFinishEvent != null) {
                     onPlaybackFinishEvent.success(true);
                 }
             }
 
             @Override
             public void onAnimationCancel(Animator animation) {
-                if(onPlaybackFinishEvent != null) {
+                if (onPlaybackFinishEvent != null) {
                     onPlaybackFinishEvent.success(false);
                 }
             }
@@ -128,7 +151,7 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
     @Override
     public void onMethodCall(MethodCall call, MethodChannel.Result result) {
         Map<String, Object> args = (Map<String, Object>) call.arguments;
-        switch(call.method) {
+        switch (call.method) {
             case "play":
                 animationView.setMinAndMaxFrame(0, (int) maxFrame);
                 animationView.setMinAndMaxProgress(0, 1);
@@ -138,24 +161,24 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
                 animationView.resumeAnimation();
                 break;
             case "playWithProgress":
-                if(args.containsKey("fromProgress") && args.get("fromProgress") != null) {
+                if (args.containsKey("fromProgress") && args.get("fromProgress") != null) {
                     final float fromProgress = ((Double) args.get("fromProgress")).floatValue();
                     animationView.setMinProgress(fromProgress);
                 }
 
-                if(args.get("toProgress") != null) {
+                if (args.get("toProgress") != null) {
                     final float toProgress = ((Double) args.get("toProgress")).floatValue();
                     animationView.setMaxProgress(toProgress);
                 }
                 animationView.playAnimation();
                 break;
             case "playWithFrames":
-                if(args.get("fromFrame") != null) {
+                if (args.get("fromFrame") != null) {
                     final int fromFrame = (int) args.get("fromFrame");
                     animationView.setMinFrame(fromFrame);
                 }
 
-                if(args.get("toFrame") != null) {
+                if (args.get("toFrame") != null) {
                     final int toFrame = (int) args.get("toFrame");
                     animationView.setMaxFrame(toFrame);
                 }
@@ -180,7 +203,7 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
                 break;
             case "setAutoReverseAnimation":
                 boolean reverse = ((args.get("reverse")) != null) ? Boolean.parseBoolean(args.get("reverse").toString()) : false;
-                if(reverse) {
+                if (reverse) {
                     animationView.setRepeatMode(2);
                 } else {
                     animationView.setRepeatMode(1);
@@ -197,13 +220,13 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
                 result.success(animationView.isAnimating());
                 break;
             case "getAnimationDuration":
-                result.success((double)animationView.getDuration());
+                result.success((double) animationView.getDuration());
                 break;
             case "getAnimationProgress":
-                result.success((double)animationView.getProgress());
+                result.success((double) animationView.getProgress());
                 break;
             case "getAnimationSpeed":
-                result.success((double)animationView.getSpeed());
+                result.success((double) animationView.getSpeed());
                 break;
             case "getLoopAnimation":
                 result.success(animationView.getRepeatCount() == -1 ? true : false);
@@ -236,9 +259,9 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
             case "LOTOpacityValue":
                 float v = Float.parseFloat(value) * 100;
                 animationView.addValueCallback(
-                    new KeyPath(keyPaths),
-                    LottieProperty.OPACITY,
-                    new LottieValueCallback<>(Math.round(v))
+                        new KeyPath(keyPaths),
+                        LottieProperty.OPACITY,
+                        new LottieValueCallback<>(Math.round(v))
                 );
                 break;
             default:
@@ -252,9 +275,9 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
 
     private int convertColor(String value) {
 //        float alpha = Integer.valueOf(value.substring(2,4), 16);
-        float red = Integer.valueOf(value.substring(4,6), 16);
-        float green = Integer.valueOf(value.substring(6,8), 16);
-        float blue = Integer.valueOf(value.substring(8,10), 16);
+        float red = Integer.valueOf(value.substring(4, 6), 16);
+        float green = Integer.valueOf(value.substring(6, 8), 16);
+        float blue = Integer.valueOf(value.substring(8, 10), 16);
         return Color.argb(255, (int) red, (int) green, (int) blue);
     }
 }
