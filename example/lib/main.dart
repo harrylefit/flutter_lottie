@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
                 height: double.infinity,
                 child: LottieView.fromFile(
                   filePath: "animations/splash.json",
-                  imagesRes: "animations/images",
+                  imagesRes: "sss",
                   autoPlay: true,
                   loop: true,
                   reverse: true,

@@ -37,6 +37,8 @@ public class LottieView : NSObject, FlutterPlatformView {
       if let argsDict = args as? Dictionary<String, Any> {
          let url = argsDict["url"] as? String ?? nil;
          let filePath = argsDict["filePath"] as? String ?? nil;
+         let imagesRes = argsDict["imagesRes"] as? String ?? nil;
+         let autoFillSize = argsDict["autoFillSize"] as? Bool ?? nil;
 
          if url != nil {
 //            self.animationView = AnimationView(url: URL(string: url!),bundle: "ddd")
@@ -51,6 +53,13 @@ public class LottieView : NSObject, FlutterPlatformView {
             self.animationView = AnimationView(filePath: path!)
          }
 
+         if autoFillSize != nil {
+//             print("THIS IS THE ID " + String(viewId) + " " + autoFillSize!)
+            if autoFillSize == true {
+            self.animationView?.contentMode = .scaleToFill
+            }
+         }
+
          let loop = argsDict["loop"] as? Bool ?? false
          let reverse = argsDict["reverse"] as? Bool ?? false
          let autoPlay = argsDict["autoPlay"] as? Bool ?? false
@@ -61,7 +70,8 @@ public class LottieView : NSObject, FlutterPlatformView {
         if(reverse){
             self.animationView?.loopMode = LottieLoopMode.autoReverse
         }
-         if(autoPlay) {
+
+        if(autoPlay) {
             self.animationView?.play(completion: completionBlock);
          }
       }
