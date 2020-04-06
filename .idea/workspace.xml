@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a3a13f9-0720-4c19-9d7c-de5e4c9bf000" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/example/animations/images/img_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example/animations/splash.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_for_Android.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/example_lib_main_dart.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/com/example/flutter_lottie/LottieView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/example/flutter_lottie/LottieView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/example/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_lottie.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_lottie.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/lottie_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/lottie_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +61,8 @@
       <option name="presentableId" value="Default" />
       <updated>1586153991123</updated>
       <workItem from="1586153993157" duration="77000" />
-      <workItem from="1586154102640" duration="5777000" />
+      <workItem from="1586154102640" duration="6434000" />
+      <workItem from="1586161178126" duration="803000" />
     </task>
     <servers />
   </component>
@@ -88,26 +74,26 @@
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state x="689" y="420" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586155648255" />
-    <state width="1638" height="264" key="GridCell.Tab.0.bottom" timestamp="1586159189003">
+    <state width="1638" height="264" key="GridCell.Tab.0.bottom" timestamp="1586161780077">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state width="1638" height="264" key="GridCell.Tab.0.bottom/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586158017584" />
-    <state width="1638" height="264" key="GridCell.Tab.0.bottom/0.23.1680.980@0.23.1680.980" timestamp="1586159189003" />
-    <state width="1638" height="264" key="GridCell.Tab.0.center" timestamp="1586159189001">
+    <state width="1638" height="264" key="GridCell.Tab.0.bottom/0.23.1680.980@0.23.1680.980" timestamp="1586161780077" />
+    <state width="1638" height="264" key="GridCell.Tab.0.center" timestamp="1586161780076">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state width="1638" height="264" key="GridCell.Tab.0.center/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586158017583" />
-    <state width="1638" height="264" key="GridCell.Tab.0.center/0.23.1680.980@0.23.1680.980" timestamp="1586159189001" />
-    <state width="1638" height="264" key="GridCell.Tab.0.left" timestamp="1586159189001">
+    <state width="1638" height="264" key="GridCell.Tab.0.center/0.23.1680.980@0.23.1680.980" timestamp="1586161780076" />
+    <state width="1638" height="264" key="GridCell.Tab.0.left" timestamp="1586161780076">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state width="1638" height="264" key="GridCell.Tab.0.left/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586158017582" />
-    <state width="1638" height="264" key="GridCell.Tab.0.left/0.23.1680.980@0.23.1680.980" timestamp="1586159189001" />
-    <state width="1638" height="264" key="GridCell.Tab.0.right" timestamp="1586159189002">
+    <state width="1638" height="264" key="GridCell.Tab.0.left/0.23.1680.980@0.23.1680.980" timestamp="1586161780076" />
+    <state width="1638" height="264" key="GridCell.Tab.0.right" timestamp="1586161780077">
       <screen x="0" y="23" width="1680" height="980" />
     </state>
     <state width="1638" height="264" key="GridCell.Tab.0.right/0.23.1680.980/-122.-1057.1920.1057@0.23.1680.980" timestamp="1586158017584" />
-    <state width="1638" height="264" key="GridCell.Tab.0.right/0.23.1680.980@0.23.1680.980" timestamp="1586159189002" />
+    <state width="1638" height="264" key="GridCell.Tab.0.right/0.23.1680.980@0.23.1680.980" timestamp="1586161780077" />
     <state width="500" height="445" key="SwitcherDM" timestamp="1586158710513">
       <screen x="0" y="23" width="1680" height="980" />
     </state>

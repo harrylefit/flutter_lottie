@@ -7,6 +7,7 @@ import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieProperty;
@@ -90,6 +91,8 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
                 animationView.setRenderMode(RenderMode.HARDWARE);
             }
         }
+
+        animationView.setScaleType(ImageView.ScaleType.FIT_XY);
 
         boolean loop, reverse, autoPlay;
 
