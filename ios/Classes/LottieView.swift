@@ -56,7 +56,7 @@ public class LottieView : NSObject, FlutterPlatformView {
          if autoFillSize != nil {
 //             print("THIS IS THE ID " + String(viewId) + " " + autoFillSize!)
             if autoFillSize == true {
-            self.animationView?.contentMode = .scaleToFill
+                self.animationView?.contentMode = .scaleToFill
             }
          }
 
